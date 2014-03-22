@@ -9,13 +9,10 @@
 
 // Third-party
 @import "vendor/jquery.ui.core";
+@import "../bower_components/normalize.scss/normalize";
 
 // bower:scss
 // endbower
-
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 
 .browsehappy {
     margin: 0.2em 0;

@@ -1,18 +1,16 @@
-@import "compass/reset";
 @import "compass/css3";
+@import "compass/typography";
+
 @import "breakpoint";
 
 @import "susy";
-
-@import "modules/all";
 
 $susy: layout(12 inside-static show);
 
 $pink: rgb(25, 0, 128);
 
 header, nav, main, footer {
-    @include background(linear-gradient(top left, rgba($pink, 0.125), rgba($pink, 0.125)), rgba($pink, 0.25));
-    @include rhythm;
+    @include background(rgba($pink, 0.3));
 }
 
 body {
