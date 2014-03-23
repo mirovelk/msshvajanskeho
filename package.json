@@ -1,6 +1,8 @@
 {
-    "name": "webappboilerplate",
-    "version": "0.0.0",
+    "name": "webappBoilerplate",
+    "version": "0.0.1",
+    "repository": "https://github.com/mirovelk/webappBoilerplate",
+    "description": "My webapp boilerplate created with yeoman.",
     "dependencies": {},
     "devDependencies": {
         "bower": "^1.3.1",
