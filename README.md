@@ -10,8 +10,10 @@ Add webappBoilerplate repo as an upstream source:
 
 To merge with webappBoilerplate run:
 
-> $ git fetch upstream
-> $ git merge upstream/master`
+```shell
+$ git fetch upstream
+$ git merge upstream/master
+```
 
 
 
