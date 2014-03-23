@@ -1,0 +1,34 @@
+@import "compass/css3";
+@import "compass/typography";
+
+@import "breakpoint";
+
+@import "susy";
+
+$susy: layout(12 inside-static show);
+
+$pink: rgb(25, 0, 128);
+
+header, nav, main, aside, footer {
+    @include background(rgba($pink, 0.3));
+}
+
+body {
+    @include container;
+}
+
+header {
+    @include full;
+}
+
+aside {
+    @include span(first 4);
+}
+
+main {
+    @include span(last 8);
+}
+
+footer {
+    @include full;
+}

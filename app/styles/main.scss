@@ -1,0 +1,22 @@
+// Modules and Variables
+@import "partials/base";
+
+// Partials
+@import "partials/header";
+@import "partials/content";
+@import "partials/sidebar";
+@import "partials/footer";
+
+// Third-party
+@import "vendor/jquery.ui.core";
+@import "../bower_components/normalize.scss/normalize";
+
+// bower:scss
+// endbower
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
