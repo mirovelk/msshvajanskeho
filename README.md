@@ -1,6 +1,22 @@
 # msshvajanskeho
 
-Web app for Materská škola S. H. Vajanského 5
+Web app for Materská škola S. H. Vajanského 5.
+
+This is a [Node.js]("http://nodejs.org/") app.
+
+## Install
+
+To install this app you need [npm]("https://www.npmjs.org/"). `npm` comes with [Node.js]("http://nodejs.org/"). Just download and install, then go to terminal, navigate to project root and type:
+
+`$ npm install`
+
+## Run for development
+
+`$ grunt serve`
+
+## Build for deployment
+
+`$ grunt`
 
 ## How to catch up with boilerplate 
 
