@@ -5,6 +5,8 @@
 
 @import "susy";
 
+@import "../../bower_components/typecsset/typecsset.scss";
+
 $susy: layout(12 inside-static show);
 
 $pink: rgb(25, 0, 128);
