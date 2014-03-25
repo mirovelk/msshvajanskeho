@@ -10,15 +10,15 @@ To install this app you need [npm]("https://www.npmjs.org/"). `npm` comes with [
 
 `$ npm install`
 
-Then to setup a development enviroment type:
+Then to download and install front-end stanck of javascripts/plugins/styles/frameworks you need to run:
 
 `$ bower install`
 
-## Run for development
+## Run (for development)
 
 `$ grunt serve`
 
-## Build for deployment
+## Build (for deployment)
 
 `$ grunt`
 
