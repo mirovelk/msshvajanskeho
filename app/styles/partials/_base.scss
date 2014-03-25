@@ -5,8 +5,6 @@
 
 @import "susy";
 
-@import "../../bower_components/typecsset/typecsset.scss";
-
 $susy: layout(12 inside-static show);
 
 $pink: rgb(25, 0, 128);
@@ -19,11 +17,13 @@ body {
     @include container;
 }
 
-header {
+#page-header {
     @include full;
 }
 
-aside {
+#page-nav {}
+
+#page-sidebar {
     @include span(first 4);
 }
 
@@ -31,6 +31,6 @@ main {
     @include span(last 8);
 }
 
-footer {
+#page-footer {
     @include full;
 }
