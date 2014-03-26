@@ -3,36 +3,45 @@ $typecsset-base-line-height: $base-line-height;
 
 $susy: layout(12 inside-static $susyGrid);
 
-body {
-    @include container;
+html, body {
+    height: 100%;
 }
 
 @include keyframes(scroll) {
     0% {
-        background-position: -2000px 0, -1500px 0, -1000px 0;
+        background-position: 0 0, 0 0, 0 0;
     }
     100% {
-        background-position: 0 0, 0 0, 0 0;
+        background-position: -1000% 0, -1000% 0, -1000% 0;
     }
 }
 
 
+// header will take up 50% of screen height with this boundaries:
+$header-min-height: 150px;
+$header-max-height: 300px;
+
 #page-header {
-    @include full;
-    height: 200px;
+    display: block;
+    height: 50%;
+    max-height: $header-max-height;
+    min-height: $header-min-height;
+    background: url("../images/sketch/header-trees.svg") bottom center no-repeat;
     #page-header-clouds {
         display: block;
-        height: 200px;
+        height: 50%;
+        max-height: $header-max-height;
+        min-height: $header-min-height;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: -1;
-        //background: url("../images/sketch/clouds.svg") 0 0;
-        background: url("../images/sketch/front.svg"), url("../images/sketch/middle.svg"), url("../images/sketch/back.svg"), transparent;
+        background: url("../images/sketch/front.svg") 0 0, url("../images/sketch/middle.svg") 0 0, url("../images/sketch/back.svg") 0 0, transparent;
+        background-size: cover;
         //@include svg-background-image("sketch/clouds");
-        @include animation("scroll 60s  linear infinite");
+        @include animation("scroll 600s linear infinite");
     }
 }
 
