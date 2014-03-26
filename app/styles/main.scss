@@ -1,19 +1,32 @@
 // Modules and Variables
-@import "partials/base";
+@import "compass/css3";
+@import "compass/typography";
+@import "breakpoint";
+@import "susy";
+
+// for debugging typography change to: show
+$susyGrid: hide;
+
+// adjust font size globally
+$base-font-size: 16px;
+$base-line-height: 24px;
+
+// Third-party
+@import "vendor/jquery.ui.core";
+
+// bower:scss
+@import "../bower_components/normalize.scss/normalize";
+@import "../bower_components/typecsset/typecsset.scss";
+
+// endbower
 
 // Partials
+@import "partials/mixins";
+@import "partials/base";
 @import "partials/header";
 @import "partials/content";
 @import "partials/sidebar";
 @import "partials/footer";
-
-// Third-party
-@import "vendor/jquery.ui.core";
-@import "../bower_components/normalize.scss/normalize";
-@import "../bower_components/typecsset/typecsset.scss";
-
-// bower:scss
-// endbower
 
 .browsehappy {
     margin: 0.2em 0;

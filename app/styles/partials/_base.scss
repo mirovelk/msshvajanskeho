@@ -1,23 +1,7 @@
-@import "compass/css3";
-@import "compass/typography";
-
-@import "breakpoint";
-
-@import "susy";
-
-$base-font-size: 16px;
-$base-line-height: 24px;
-
 $typecsset-base-font-size: $base-font-size;
 $typecsset-base-line-height: $base-line-height;
 
-$susy: layout(12 inside-static show);
-
-$pink: rgb(25, 0, 128);
-
-#page-header, #page-nav, #page-main, #page-sidebar, #page-footer {
-    @include background(rgba($pink, 0.3));
-}
+$susy: layout(12 inside-static $susyGrid);
 
 body {
     @include container;
@@ -25,6 +9,7 @@ body {
 
 #page-header {
     @include full;
+    @include svg-background-image("clouds");
 }
 
 #page-nav {}
