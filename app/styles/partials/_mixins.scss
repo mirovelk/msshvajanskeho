@@ -1,35 +1,5 @@
 // http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
 
-// font-size in rem with fallback to px
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-    font-size: $size;
-    font-size: calculateRem($size);
-}
-
-// breakpoints
-@mixin bp-large {
-    @media only screen and (max-width: 60em) {
-        @content;
-    }
-}
-
-@mixin bp-medium {
-    @media only screen and (max-width: 40em) {
-        @content;
-    }
-}
-
-@mixin bp-small {
-    @media only screen and (max-width: 30em) {
-        @content;
-    }
-}
-
 // svg backround with fallback, depends on Modernizr
 $image-path: "../images" !default;
 $fallback-extension: "png" !default;
@@ -48,35 +18,38 @@ $retina-suffix: "@2x";
     }
 }
 
-// animation
-@mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
+// animation mixin from blog post http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: "";
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
     }
-
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }
-
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }
-
-    @keyframes #{$animation-name} {
-        @content;
-    }
+    -webkit-animation: $animations;
+    -moz-animation: $animations;
+    -o-animation: $animations;
+    animation: $animations;
 }
 
-@mixin animation($str) {
-    -webkit-animation: #{$str};
-    -moz-animation: #{$str};
-    -ms-animation: #{$str};
-    -o-animation: #{$str};
-    animation: #{$str};
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
 }
 
 // visuallyhidden
